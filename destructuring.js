@@ -22,8 +22,11 @@ var carDetails = {
 */
 
 //Code Here
-
-
+// var {color} = carDetails
+// var {make} = carDetails
+// var {model} = carDetails
+// var {year} = carDetails
+var {color, make, model, year} = carDetails
 
 ////////// PROBLEM 2 //////////
 
@@ -35,7 +38,11 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  // var {firstName} = obj;
+  // var {lastName} = obj;
+  // var {title} = obj
+  const {firstName, lastName, title} = obj;
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,9 +61,11 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
-
+function totalPopulation (object) {
+  var {utah, california, texas, arizona} = object
+  var total = utah + california + texas + arizona
+  return(total)
+}
 ////////// PROBLEM 4 //////////
 
 /*
@@ -69,7 +78,12 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function ingredients (object) {
+var {carb, fat, protein} = object;
+  let health = []
+  health.push(carb, fat, protein)
+  return health
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -86,7 +100,10 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function largeNumbers (object) {
+  var {first, second, third} = object;
+  return Math.min(first, second, third)
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -99,4 +116,14 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function numberGroups( object ) {
+  var {a, b, c} = object;
+  if (Math.max(a.length, b.length, c.length) === a.length) {
+    return a;
+  }
+  if (Math.max(a.length, b.length, c.length) === b.length) {
+    return b;
+} else {
+  return c;
+}
+}

@@ -41,6 +41,12 @@
 
 function showValues( obj ) {
   //Code Here
+  var string1 = ""
+  for (var key in obj) {
+    string1 += obj[key]
+    
+  }
+  return string1
 }
 
 
@@ -54,7 +60,14 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function greaterThan10 (object) {
+  for (var key in object) {
+    if (object[key] > 10 ) {
+      object[key] = 0
+    }
+  }
+  return object
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -66,7 +79,12 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function double (object) {
+  for (var key in object) {
+    object[key] *= 2
+  }
+  return object
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -80,7 +98,15 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function secrets (object) {
+  var words = "";
+  for (var key in object) {
+    if (key.substr(0,2) === 'sh') {
+      words += object[key];
+    }
+  }
+  return words;
+}
 
 
 /* 
@@ -111,7 +137,12 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function removePassword (object) {
+  for (var key in object) {
+    delete object.password
+  }
+  return object
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -130,7 +161,10 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
+for ( var key in deleteTheBigNumbers) 
+  if ( deleteTheBigNumbers[key] > 100) {
+    delete deleteTheBigNumbers[key]
+  }
 
 
 ////////// PROBLEM 7 //////////
